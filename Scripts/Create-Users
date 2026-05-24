@@ -1,0 +1,47 @@
+# Jane Doe
+New-MgUser `
+-DisplayName "Jane Doe" `
+-GivenName "Jane" `
+-Surname "Doe" `
+-UserPrincipalName "janedoe@lamargoodhallgmail.onmicrosoft.com" `
+-MailNickname "janedoe" `
+-AccountEnabled:$true `
+-PasswordProfile @{
+    Password = "TempPass123!"
+}
+
+# Mark Kent
+New-MgUser `
+-DisplayName "Mark Kent" `
+-GivenName "Mark" `
+-Surname "Kent" `
+-UserPrincipalName "markkent@lamargoodhallgmail.onmicrosoft.com" `
+-MailNickname "markkent" `
+-AccountEnabled:$true `
+-PasswordProfile @{
+    Password = "TempPass123!"
+}
+
+# Alison Brown
+New-MgUser `
+-DisplayName "Alison Brown" `
+-GivenName "Alison" `
+-Surname "Brown" `
+-UserPrincipalName "alisonbrown@lamargoodhallgmail.onmicrosoft.com" `
+-MailNickname "alisonbrown" `
+-AccountEnabled:$true `
+-PasswordProfile @{
+    Password = "TempPass123!"
+
+
+New-MgUser `
+-DisplayName "John Smith" `
+-GivenName "John" `
+-Surname "Smith" `
+-UserPrincipalName "johnsmith@lamargoodhallgmail.onmicrosoft.com" `
+-MailNickname "johnsmith" `
+-AccountEnabled:$true `
+-PasswordProfile @{
+    Password = "TempPass123!"
+
+}
