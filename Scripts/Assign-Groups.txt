@@ -1,0 +1,52 @@
+
+Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
+
+# User-to-group assignments
+
+$Assignments = @(
+    @{
+        User = "johnsmith@lamargoodhallgmail.onmicrosoft.com"
+        Group = "HelpDesk-Team"
+    },
+
+    @{
+        User = "janedoe@lamargoodhallgmail.onmicrosoft.com"
+        Group = "HR-Team"
+    },
+
+    @{
+        User = "markkent@lamargoodhallgmail.onmicrosoft.com"
+        Group = "IT-Admins"
+    },
+
+    @{
+        User = "alisonbrown@lamargoodhallgmail.onmicrosoft.com"
+        Group = "HelpDesk-Team"
+    }
+)
+
+foreach ($Assignment in $Assignments) {
+
+    try {
+
+        $User = Get-MgUser `
+        -Filter "userPrincipalName eq '$($Assignment.User)'"
+
+        $Group = Get-MgGroup `
+        -Filter "displayName eq '$($Assignment.Group)'"
+
+        New-MgGroupMember `
+        -GroupId $Group.Id `
+        -DirectoryObjectId $User.Id
+
+        Write-Host "Added $($Assignment.User) to $($Assignment.Group)"
+
+    }
+
+    catch {
+
+        Write-Host "Failed assignment for $($Assignment.User)"
+        Write-Host $_.Exception.Message
+
+    }
+}
