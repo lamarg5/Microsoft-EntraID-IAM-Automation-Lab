@@ -1,5 +1,6 @@
 # Identity-Access-Management-Automation-Lab
-Built a cloud-based Identity and Access Management (IAM) lab using Microsoft Entra ID and PowerShell to simulate real-world user lifecycle management tasks.
+
+For this project, I created an Identity and Access Management   lab using a Microsoft Entra tenant account . I used PowerShell to connect to Microsoft Entra and create scripts that automate basic identity tasks such as user onboarding, user account creation, offboarding, creating groups, assigning users to groups, and assigning roles. The goal of this project was to gain hands-on experience with basic identity and access management processes and automation.
 
 
 ## Tools Used
@@ -11,7 +12,7 @@ Built a cloud-based Identity and Access Management (IAM) lab using Microsoft Ent
 ## Features
 - Automated user account creation
 - Group membership management
-- Role assignment automation
-- User onboarding workflows
-- User offboarding workflows
-- Access review simulations
+- Role assignment 
+- User onboarding 
+- User offboarding
+
