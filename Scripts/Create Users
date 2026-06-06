@@ -1,0 +1,56 @@
+PS C:\Windows\System32> Connect-MgGraph -Scopes User.ReadWrite.All
+
+   $Users = @(
+     @{
+        DisplayName = "Mark Kent"
+         UserPrincipalName = "Mark.Kent@lamargoodhallgmail.onmicrosoft.com"
+        MailNickname = "Mark"
+    },
+     @{
+         DisplayName = "Jane Doe"        
+         UserPrincipalName = "Jane.Doe@lamargoodhallgmail.onmicrosoft.com"
+         MailNickname = "alice"
+     },
+    @{
+        DisplayName = "Alison Brown"
+        UserPrincipalName = "Alison.Brown@lamargoodhallgmail.onmicrosoft.com"
+         MailNickname = "alice"
+     },
+     @{
+         DisplayName = "John Smith"
+         UserPrincipalName = "John.Smith@lamargoodhallgmail.onmicrosoft.com"
+         MailNickname = "john"
+     }
+   )
+
+   foreach ($User in $Users) {
+     $PasswordProfile = @{
+        Password = "TempPass123!"
+      ForceChangePasswordNextSignIn = $true
+    }
+
+     New-MgUser `
+         -DisplayName $User.DisplayName `
+         -UserPrincipalName $User.UserPrincipalName `
+        -MailNickname $User.MailNickname `
+         -AccountEnabled:$true `
+         -PasswordProfile $PasswordProfile
+  }
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+NOTE: Sign in by Web Account Manager (WAM) is enabled by default on Windows systems and cannot be disabled when using the default ClientId.
+To disable WAM run Set-MgGraphOption -DisableLoginByWAM $true and then use a custom ClientId.
+
+
+DisplayName Id                                   Mail UserPrincipalName
+----------- --                                   ---- -----------------
+Mark Kent   9f7022e4-1274-4f18-a215-56db3c428281      Mark.Kent@lamargoodhallgmail.onmicrosoft.com
+Jane Doe    529e0d1f-489b-45e7-9593-649903ef768b      Jane.Doe@lamargoodhallgmail.onmicrosoft.com
+Alison Bro… da085b68-db63-49d3-b667-644727fcd475      Alison.Brown@lamargoodhallgmail.onmicrosoft…
+John Smith  f90afd86-66af-4cfa-b4dd-ee2bb4764251      John.Smith@lamargoodhallgmail.onmicrosoft.c…
