@@ -10,9 +10,9 @@ For this project, I built an Identity and Access Management (IAM) lab using Micr
   
 
 ## Features
-- Automated user account creation
-- Group membership management
-- Role assignment 
-- User onboarding 
-- User offboarding
+Group creation and membership management
+Role assignment and access management
+User onboarding automation
+User offboarding automation
+Multi-Factor Authentication (MFA) enforcement
 
