@@ -17,20 +17,4 @@ For this project, I built an Identity and Access Management (IAM) lab using Micr
 - Multi-Factor Authentication (MFA) enforcement
 
 
-Users, Groups, and Roles
-User
-Group
-Role
-Allison Brown
-IT Help Desk Team
-Helpdesk Administrator
-Jane Doe
-Human Resources Team
-None
-Mark Kent
-IT Administrators Team
-User Administrator
-John Smith
-Disabled (Offboarded)
-Access Removed
 
