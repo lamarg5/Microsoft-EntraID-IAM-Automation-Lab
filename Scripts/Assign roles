@@ -1,7 +1,7 @@
 PS C:\Windows\System32>
 
- $Alison = Get-EntraUser -UserId 'Alison.Brown@lamargoodhallgmail.onmicrosoft.com'
- $Mark = Get-EntraUser -UserId 'Mark.Kent@lamargoodhallgmail.onmicrosoft.com'          
+ $Alison = Get-EntraUser -UserId 'Alison.Brown@company.onmicrosoft.com'
+ $Mark = Get-EntraUser -UserId 'Mark.Kent@company.onmicrosoft.com'          
  
 
  $HelpDeskRole = Get-EntraDirectoryRoleDefinition -Filter "DisplayName eq 'Helpdesk Administrator'"
