@@ -3,13 +3,13 @@ PS C:\Windows\System32> Connect-MgGraph -Scopes User.ReadWrite.All
    $Users = @(
      @{
         DisplayName = "Mark Kent"
-         UserPrincipalName = "Mark.Kent@lamargoodhallgmail.onmicrosoft.com"
+         UserPrincipalName = "Mark.Kentcompany.onmicrosoft.com"
         MailNickname = "Mark"
     },
      @{
          DisplayName = "Jane Doe"        
-         UserPrincipalName = "Jane.Doe@lamargoodhallgmail.onmicrosoft.com"
-         MailNickname = "alice"
+         UserPrincipalName = "Jane.Doe@company.onmicrosoft.com"
+         MailNickname = "Jane"
      },
     @{
         DisplayName = "Alison Brown"
