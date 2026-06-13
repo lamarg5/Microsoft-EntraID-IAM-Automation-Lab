@@ -25,7 +25,7 @@ PS C:\Windows\System32> Connect-MgGraph -Scopes User.ReadWrite.All
 
    foreach ($User in $Users) {
      $PasswordProfile = @{
-        Password = "TempPass123!"
+        Password = "<TemporaryPassword>"
       ForceChangePasswordNextSignIn = $true
     }
 
