@@ -1,5 +1,5 @@
 PS C:\Windows\System32>  Set-EntraUser `
-   -UserId 'john.smith@lamargoodhallgmail.onmicrosoft.com' `
+   -UserId 'john.smith@@company.onmicrosoft.com' `
     -AccountEnabled $false
 PS C:\Windows\System32> $Group = Get-EntraGroup -Filter "displayName eq 'IT-HelpDesk-Team'"
 $User = Get-EntraUser -UserId 'john.smith@company.onmicrosoft.com
