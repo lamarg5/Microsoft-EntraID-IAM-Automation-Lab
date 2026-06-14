@@ -4,7 +4,7 @@ Connect-MgGraph -Scopes User.ReadWrite.All
    $Users = @(
      @{
         DisplayName = "Mark Kent"
-         UserPrincipalName = "Mark.Kentcompany.onmicrosoft.com"
+         UserPrincipalName = "Mark.Kent@company.onmicrosoft.com"
         MailNickname = "Mark"
     },
      @{
