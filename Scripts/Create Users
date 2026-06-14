@@ -13,13 +13,12 @@ PS C:\Windows\System32> Connect-MgGraph -Scopes User.ReadWrite.All
      },
     @{
         DisplayName = "Alison Brown"
-        UserPrincipalName = "Alison.Brown@lamargoodhallgmail.onmicrosoft.com"
+        UserPrincipalName = "Alison.Brown@company.onmicrosoft.com"
          MailNickname = "alice"
      },
      @{
          DisplayName = "John Smith"
-         UserPrincipalName = "John.Smith@lamargoodhallgmail.onmicrosoft.com"
-         MailNickname = "john"
+         UserPrincipalName = "John.Smith@company.onmicrosoft.com"
      }
    )
 
