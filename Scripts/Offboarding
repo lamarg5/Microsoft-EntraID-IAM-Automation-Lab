@@ -2,7 +2,7 @@ PS C:\Windows\System32>  Set-EntraUser `
    -UserId 'john.smith@lamargoodhallgmail.onmicrosoft.com' `
     -AccountEnabled $false
 PS C:\Windows\System32> $Group = Get-EntraGroup -Filter "displayName eq 'IT-HelpDesk-Team'"
-$User = Get-EntraUser -UserId 'john.smith@lamargoodhallgmail.onmicrosoft.com
+$User = Get-EntraUser -UserId 'john.smith@company.onmicrosoft.com
  Remove-EntraGroupMember `
      -GroupId $Group.Id `
     -MemberId $User.Id
